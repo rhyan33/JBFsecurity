@@ -4,174 +4,173 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JBF Security | Segurança Eletrônica</title>
-  <meta name="description" content="Empresa especializada em soluções de segurança eletrônica: controle de acesso, alarmes, CFTV e proteção perimetral." />
+  <meta name="description" content="Empresa especializada em soluções de segurança eletrônica." />
+
   <style>
-    :root {
-      --primary:#0b0f14;
-      --accent:#ef4444; /* vermelho aura */
-      --muted:#6b7280;
-      --bg:#f5f7fb;
-      --card:#ffffff;
+    :root{
+      --accent:#ef4444;
     }
+
     *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, Arial, sans-serif;background:var(--bg);color:#111}
-    a{text-decoration:none;color:inherit}
-
-    /* Header */
-    header{position:sticky;top:0;z-index:10;background:rgba(11,15,20,.95);backdrop-filter:saturate(120%) blur(6px)}
-    .nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;color:#fff}
-    .logo{font-weight:800;letter-spacing:.5px}
-    .menu a{margin-left:18px;color:#e5e7eb}
-    .menu a:hover{color:#fff}
-
-    /* Hero */
-    .hero{background:radial-gradient(circle at center, rgba(239,68,68,.35), #0b0f14 60%, #020617);color:#fff}
-    .hero-inner{max-width:1200px;margin:auto;padding:90px 20px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px}
-    .hero h1{font-size:42px;line-height:1.1;margin:0 0 16px}
-    .hero p{color:#cbd5e1;font-size:18px}
-    .cta{margin-top:26px;display:flex;gap:14px}
-    .btn{padding:14px 18px;border-radius:10px;font-weight:600}
-    .btn.primary{background:var(--accent);color:#fff}
-    .btn.ghost{border:1px solid #334155;color:#e5e7eb}
-    .hero-card{box-shadow:0 0 45px rgba(239,68,68,.45);
-    border:1px solid rgba(239,68,68,.35);
-background:rgba(255,255,255,.06);border:1px solid #1f2937;border-radius:18px;padding:22px}
-
-    /* Sections */
-    section{max-width:1200px;margin:70px auto;padding:0 20px}
-    .section-title{display:flex;align-items:end;justify-content:space-between;gap:20px}
-    .section-title h2{font-size:30px;margin:0}
-    .section-title p{color:var(--muted)}
-
-    /* Cards */
-    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:26px}
-    .card{background:var(--card);border-radius:18px;padding:22px;box-shadow:0 10px 25px rgba(0,0,0,.06)}
-    .card h3{margin-top:0}
-    .tag{display:inline-block;background:#eef2ff;color:#3730a3;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:600}
-
-    /* About */
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:30px}
-    .about ul{padding-left:18px;color:#374151}
-
-    /* Contact */
-    .contact{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
-    .contact form{display:grid;gap:12px}
-    input, textarea{padding:14px;border-radius:12px;border:1px solid #e5e7eb}
-    textarea{min-height:120px}
-
-    /* Footer */
-    footer{background:#0b0f14;color:#cbd5e1}
-    .footer-inner{max-width:1200px;margin:auto;padding:26px 20px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px}
-
-    /* Responsive */
-    @media (max-width:900px){
-      .hero-inner{grid-template-columns:1fr}
-      .grid{grid-template-columns:1fr 1fr}
-      .about,.contact{grid-template-columns:1fr}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:#f5f7fb;
+      color:#111;
     }
-    @media (max-width:520px){
-      .grid{grid-template-columns:1fr}
-      .hero h1{font-size:34px}
+
+    /* HEADER */
+    header{
+      background:#0b0f14;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+
+    .nav{
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:14px 20px;
+      color:#fff;
+    }
+
+    /* LOGO + AURA */
+    .logo-img{
+      height:42px;
+      animation:aura 3s infinite ease-in-out;
+    }
+
+    @keyframes aura{
+      0%{
+        filter:drop-shadow(0 0 8px rgba(239,68,68,.4));
+      }
+      50%{
+        filter:drop-shadow(0 0 30px rgba(239,68,68,.9));
+      }
+      100%{
+        filter:drop-shadow(0 0 8px rgba(239,68,68,.4));
+      }
+    }
+
+    .menu a{
+      color:#e5e7eb;
+      margin-left:18px;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    /* HERO */
+    .hero{
+      background:radial-gradient(circle at center, rgba(239,68,68,.35), #0b0f14 60%, #020617);
+      color:#fff;
+      padding:90px 20px;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:42px;
+      margin-bottom:16px;
+    }
+
+    .hero p{
+      color:#cbd5e1;
+      font-size:18px;
+      max-width:700px;
+      margin:auto;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:26px;
+      background:var(--accent);
+      color:#fff;
+      padding:14px 22px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    /* SECTIONS */
+    section{
+      max-width:1200px;
+      margin:70px auto;
+      padding:0 20px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:#fff;
+      padding:22px;
+      border-radius:18px;
+      box-shadow:0 10px 25px rgba(0,0,0,.06);
+    }
+
+    footer{
+      background:#0b0f14;
+      color:#cbd5e1;
+      padding:30px;
+      text-align:center;
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="nav">
-      <div class="logo"><img src="logo-jbf.png" alt="JBF Security" style="height:42px"></div>
-      <nav class="menu">
-        <a href="#sobre">Sobre</a>
-        <a href="#solucoes">Soluções</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <div>
-        <h1>Proteção inteligente em Segurança Eletrônica</h1>
-        <p>Projetos, instalação e manutenção com tecnologia de ponta para empresas, condomínios e residências.</p>
-        <div class="cta">
-          <a class="btn primary" href="#contato">Solicitar orçamento</a>
-          <a class="btn ghost" href="#solucoes">Ver soluções</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <span class="tag">Atendimento especializado</span>
-        <p>Equipe certificada, suporte rápido e projetos sob medida para sua necessidade.</p>
-      </div>
-    </div>
-  </section>
+<header>
+  <div class="nav">
+    <img src="logo-jbf.png" alt="JBF Security" class="logo-img">
+    <nav class="menu">
+      <a href="#solucoes">Soluções</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
 
-  <section id="solucoes">
-    <div class="section-title">
-      <h2>Nossas Soluções</h2>
-      <p>Proteção inteligente e integrada</p>
-    </div>
-    <div class="grid">
-      <div class="card"><h3>Controle de Acesso</h3><p>Biometria, cartões, reconhecimento e gestão de entradas.</p></div>
-      <div class="card"><h3>CFTV</h3><p>Câmeras IP, monitoramento e gravação em nuvem.</p></div>
-      <div class="card"><h3>Alarmes & Sensores</h3><p>Detecção perimetral e resposta rápida.</p></div>
-      <div class="card"><h3>Fechaduras Digitais</h3><p>Segurança e praticidade para portas.</p></div>
-    </div>
-  </section>
+<section class="hero">
+  <h1>Segurança Eletrônica Inteligente</h1>
+  <p>Projetos, instalação e manutenção em CFTV, alarmes e controle de acesso.</p>
+  <a href="#contato" class="btn">Solicitar Orçamento</a>
+</section>
 
-  <section id="sobre">
-    <div class="section-title">
-      <h2>Sobre a Empresa</h2>
-      <p>Confiança construída com resultados</p>
-    </div>
-    <div class="about">
-      <div class="card">
-        <p>Atuamos com soluções modernas de segurança eletrônica, focados em qualidade, transparência e atendimento personalizado.</p>
-      </div>
-      <div class="card">
-        <ul>
-          <li>Projetos sob medida</li>
-          <li>Equipe técnica qualificada</li>
-          <li>Suporte e manutenção</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<section id="solucoes">
+  <h2>Nossas Soluções</h2>
+  <div class="grid">
+    <div class="card">CFTV e Monitoramento</div>
+    <div class="card">Controle de Acesso</div>
+    <div class="card">Alarmes e Sensores</div>
+    <div class="card">Fechaduras Digitais</div>
+  </div>
+</section>
 
-  <section id="contato">
-    <div class="section-title">
-      <h2>Fale Conosco</h2>
-      <p>Peça um orçamento</p>
-    </div>
-    <div class="contact">
-      <form class="card">
-        <input placeholder="Nome" required />
-        <input placeholder="Email" type="email" required />
-        <input placeholder="Telefone" />
-        <textarea placeholder="Mensagem"></textarea>
-        <button class="btn primary" type="submit">Enviar</button>
-      </form>
-      <div class="card">
-        <p><strong>Telefone:</strong> (11) 94715-0302</p>
-        <p><strong>WhatsApp:</strong> (11) 98495-4691</p>
-        <p><strong>Email:</strong> julianabarros2025@outlook.com</p>
-      </div>
-    </div>
-  </section>
+<section id="sobre">
+  <h2>Sobre a JBF Security</h2>
+  <div class="card">
+    Atuamos com soluções modernas de segurança eletrônica, focados em qualidade,
+    confiança e atendimento personalizado.
+  </div>
+</section>
 
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <strong>JBF Security</strong>
-        <p>Soluções em segurança eletrônica.</p>
-      </div>
-      <div>
-        <p>Links</p>
-        <a href="#">Política</a><br />
-        <a href="#">Privacidade</a>
-      </div>
-      <div>
-        <p>© 2025</p>
-      </div>
-    </div>
-  </footer>
+<section id="contato">
+  <h2>Contato</h2>
+  <div class="card">
+    <p><strong>Telefone:</strong> (11) 94715-0302</p>
+    <p><strong>WhatsApp:</strong> (11) 98495-4691</p>
+    <p><strong>Email:</strong> julianabarros2025@outlook.com</p>
+  </div>
+</section>
+
+<footer>
+  © 2025 — JBF Security
+</footer>
+
 </body>
 </html>

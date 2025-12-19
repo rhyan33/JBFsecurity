@@ -1,233 +1,169 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JBF Security | Segurança Eletrônica em São Paulo</title>
-<meta name="description" content="Empresa de segurança eletrônica em São Paulo. CFTV, alarmes, controle de acesso e soluções completas. Orçamento sem compromisso.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JBF Security | Segurança Eletrônica em São Paulo</title>
+  <meta name="description" content="JBF Security oferece soluções profissionais em segurança eletrônica em São Paulo: CFTV, alarmes, controle de acesso e fechaduras digitais." />
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-<style>
-:root{
-  --red:#ef4444;
-  --dark:#0b0f14;
-}
+  <style>
+    :root{
+      --dark:#0b0f14;
+      --red:#c1121f;
+      --gray:#6b7280;
+      --bg:#f4f6fa;
+      --card:#ffffff;
+    }
 
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:#f5f7fb;
-  color:#111;
-}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial, Helvetica, sans-serif;background:var(--bg);color:#111}
+    a{text-decoration:none;color:inherit}
 
-a{text-decoration:none}
+    /* HEADER */
+    header{background:var(--dark);position:sticky;top:0;z-index:10}
+    .nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;color:#fff}
+    .nav img{height:64px}
+    .menu a{margin-left:20px;color:#e5e7eb;font-weight:500}
+    .menu a:hover{color:#fff}
 
-/* HEADER */
-header{
-  background:var(--dark);
-  position:sticky;
-  top:0;
-  z-index:10;
-}
+    /* HERO */
+    .hero{background:radial-gradient(circle at center, rgba(193,18,31,.35), #0b0f14 60%);color:#fff}
+    .hero-inner{max-width:1200px;margin:auto;padding:90px 20px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px}
+    .hero h1{font-size:42px;margin:0 0 16px}
+    .hero p{font-size:18px;color:#d1d5db}
 
-.nav{
-  max-width:1200px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:14px 20px;
-}
+    .cta{margin-top:26px;display:flex;gap:14px}
+    .btn{padding:14px 20px;border-radius:10px;font-weight:600;display:inline-flex;align-items:center;gap:8px}
+    .btn.primary{background:var(--red);color:#fff}
+    .btn.secondary{border:1px solid #374151;color:#fff}
 
-/* LOGO */
-.logo-img{
-  height:90px;
-  animation:aura 3s infinite ease-in-out;
-}
+    .hero-card{
+      background:rgba(255,255,255,.06);
+      border-radius:22px;
+      padding:30px;
+      text-align:center;
+      box-shadow:0 0 60px rgba(193,18,31,.6);
+      animation:pulse 3s infinite;
+    }
 
-@keyframes aura{
-  0%{filter:drop-shadow(0 0 10px rgba(239,68,68,.4));}
-  50%{filter:drop-shadow(0 0 35px rgba(239,68,68,.9));}
-  100%{filter:drop-shadow(0 0 10px rgba(239,68,68,.4));}
-}
+    .hero-card img{width:260px;max-width:100%}
 
-.menu a{
-  color:#e5e7eb;
-  margin-left:18px;
-  font-weight:bold;
-}
+    @keyframes pulse{
+      0%{box-shadow:0 0 35px rgba(193,18,31,.4)}
+      50%{box-shadow:0 0 70px rgba(193,18,31,.9)}
+      100%{box-shadow:0 0 35px rgba(193,18,31,.4)}
+    }
 
-/* HERO */
-.hero{
-  background:radial-gradient(circle at center, rgba(239,68,68,.35), #0b0f14 60%, #020617);
-  color:#fff;
-  padding:90px 20px;
-  text-align:center;
-}
+    /* SECTIONS */
+    section{max-width:1200px;margin:80px auto;padding:0 20px}
+    .section-title{text-align:center;margin-bottom:40px}
+    .section-title h2{font-size:32px;margin-bottom:10px}
+    .section-title p{color:var(--gray)}
 
-.hero h1{
-  font-size:44px;
-  margin-bottom:14px;
-}
+    /* SOLUÇÕES */
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    .card{background:var(--card);border-radius:18px;padding:26px;box-shadow:0 10px 30px rgba(0,0,0,.06);text-align:center}
+    .card i{font-size:34px;color:var(--red);margin-bottom:14px}
 
-.hero p{
-  color:#cbd5e1;
-  font-size:18px;
-  max-width:800px;
-  margin:auto;
-}
+    /* DIFERENCIAIS */
+    .why{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 
-.hero .btn{
-  display:inline-block;
-  margin-top:28px;
-  background:var(--red);
-  color:#fff;
-  padding:16px 26px;
-  border-radius:12px;
-  font-weight:bold;
-}
+    /* CONTATO */
+    .contact{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+    input, textarea{padding:14px;border-radius:12px;border:1px solid #e5e7eb;width:100%}
+    textarea{min-height:120px}
 
-/* SECTIONS */
-section{
-  max-width:1200px;
-  margin:80px auto;
-  padding:0 20px;
-}
+    /* WHATSAPP */
+    .whatsapp{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25d366;
+      color:#fff;
+      padding:14px 18px;
+      border-radius:999px;
+      font-weight:600;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      box-shadow:0 10px 25px rgba(0,0,0,.25);
+    }
 
-.section-title{
-  text-align:center;
-  margin-bottom:40px;
-}
+    /* FOOTER */
+    footer{background:var(--dark);color:#cbd5e1}
+    .footer-inner{max-width:1200px;margin:auto;padding:30px 20px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px}
 
-.section-title h2{
-  font-size:32px;
-  margin-bottom:10px;
-}
-
-.section-title p{
-  color:#6b7280;
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:24px;
-}
-
-.card{
-  background:#fff;
-  padding:26px;
-  border-radius:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
-  text-align:center;
-}
-
-/* WHY */
-.why i{
-  font-size:34px;
-  color:var(--red);
-  margin-bottom:14px;
-}
-
-/* TESTIMONIAL */
-.testimonial{
-  font-style:italic;
-  color:#374151;
-}
-
-/* CONTACT */
-.contact-info p{
-  font-size:16px;
-  margin:10px 0;
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25d366;
-  color:#fff;
-  width:64px;
-  height:64px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:34px;
-  box-shadow:0 10px 25px rgba(0,0,0,.3);
-  z-index:99;
-}
-
-footer{
-  background:var(--dark);
-  color:#cbd5e1;
-  padding:40px 20px;
-  text-align:center;
-}
-
-@media(max-width:700px){
-  .logo-img{height:75px;}
-  .hero h1{font-size:32px;}
-}
-</style>
+    /* RESPONSIVO */
+    @media(max-width:900px){
+      .hero-inner{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+      .why{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+    }
+    @media(max-width:520px){
+      .grid{grid-template-columns:1fr}
+      .hero h1{font-size:32px}
+    }
+  </style>
 </head>
-
 <body>
 
 <header>
   <div class="nav">
-    <img src="logo-jbf.png" class="logo-img" alt="JBF Security">
+    <img src="logo-jbf.png" alt="JBF Security" />
     <nav class="menu">
+      <a href="#sobre">Sobre</a>
       <a href="#solucoes">Soluções</a>
-      <a href="#porque">Por que nós</a>
       <a href="#contato">Contato</a>
     </nav>
   </div>
 </header>
 
 <section class="hero">
-  <h1>Segurança Eletrônica Inteligente</h1>
-  <p>Protegemos residências, empresas e condomínios com tecnologia moderna, atendimento rápido e soluções sob medida em São Paulo.</p>
-  <a href="#contato" class="btn">Solicitar orçamento</a>
+  <div class="hero-inner">
+    <div>
+      <h1>Segurança Eletrônica Profissional</h1>
+      <p>Atendimento especializado em São Paulo com soluções modernas para residências, comércios e empresas.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://wa.me/5511947150302" target="_blank"><i class="fab fa-whatsapp"></i> Solicitar orçamento</a>
+        <a class="btn secondary" href="#solucoes">Nossas soluções</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <img src="logo-jbf.png" alt="Logo JBF Security" />
+      <p>Confiança, tecnologia e atendimento responsável.</p>
+    </div>
+  </div>
 </section>
 
 <section id="solucoes">
   <div class="section-title">
     <h2>Nossas Soluções</h2>
-    <p>Tecnologia, proteção e tranquilidade</p>
+    <p>Proteção completa e integrada</p>
   </div>
+
   <div class="grid">
-    <div class="card"><i class="fa-solid fa-video"></i><h3>CFTV</h3><p>Monitoramento 24h com imagens de alta qualidade.</p></div>
-    <div class="card"><i class="fa-solid fa-lock"></i><h3>Controle de Acesso</h3><p>Gestão segura de entradas e saídas.</p></div>
-    <div class="card"><i class="fa-solid fa-bell"></i><h3>Alarmes</h3><p>Detecção rápida contra invasões.</p></div>
-    <div class="card"><i class="fa-solid fa-key"></i><h3>Fechaduras Digitais</h3><p>Mais segurança e praticidade.</p></div>
+    <div class="card"><i class="fas fa-video"></i><h3>CFTV</h3><p>Câmeras IP, monitoramento e gravação segura.</p></div>
+    <div class="card"><i class="fas fa-bell"></i><h3>Alarmes</h3><p>Sensores e detecção perimetral.</p></div>
+    <div class="card"><i class="fas fa-fingerprint"></i><h3>Controle de Acesso</h3><p>Biometria, cartões e reconhecimento.</p></div>
+    <div class="card"><i class="fas fa-lock"></i><h3>Fechaduras Digitais</h3><p>Segurança e praticidade.</p></div>
   </div>
 </section>
 
-<section id="porque">
+<section id="sobre">
   <div class="section-title">
     <h2>Por que escolher a JBF Security?</h2>
-    <p>Confiança construída com resultados</p>
+    <p>Compromisso, confiança e qualidade</p>
   </div>
-  <div class="grid why">
-    <div class="card"><i class="fa-solid fa-bolt"></i><p>Atendimento rápido e eficiente</p></div>
-    <div class="card"><i class="fa-solid fa-user-shield"></i><p>Técnicos qualificados</p></div>
-    <div class="card"><i class="fa-solid fa-shield-halved"></i><p>Soluções sob medida</p></div>
-  </div>
-</section>
 
-<section>
-  <div class="section-title">
-    <h2>O que dizem nossos clientes</h2>
-  </div>
-  <div class="grid">
-    <div class="card testimonial">“Serviço rápido e muito profissional. Recomendo.”</div>
-    <div class="card testimonial">“Atendimento excelente e instalação perfeita.”</div>
-    <div class="card testimonial">“Empresa séria e confiável.”</div>
+  <div class="why">
+    <div class="card"><i class="fas fa-shield-halved"></i><h3>Profissional Autônomo</h3><p>Atendimento direto, transparente e responsável.</p></div>
+    <div class="card"><i class="fas fa-clock"></i><h3>Atendimento Rápido</h3><p>Agilidade no suporte e instalação.</p></div>
+    <div class="card"><i class="fas fa-star"></i><h3>Soluções Sob Medida</h3><p>Projetos personalizados para sua necessidade.</p></div>
   </div>
 </section>
 
@@ -236,21 +172,43 @@ footer{
     <h2>Fale Conosco</h2>
     <p>Orçamento sem compromisso</p>
   </div>
-  <div class="card contact-info">
-    <p><i class="fa-solid fa-phone"></i> (11) 94715-0302</p>
-    <p><i class="fa-brands fa-whatsapp"></i> (11) 98495-4691</p>
-    <p><i class="fa-solid fa-envelope"></i> julianabarros2025@outlook.com</p>
-    <p><i class="fa-solid fa-location-dot"></i> Atendimento em São Paulo</p>
+
+  <div class="contact">
+    <form class="card">
+      <input placeholder="Nome" required />
+      <input placeholder="Email" type="email" required />
+      <input placeholder="Telefone" />
+      <textarea placeholder="Mensagem"></textarea>
+      <button class="btn primary" type="submit">Enviar mensagem</button>
+    </form>
+
+    <div class="card">
+      <p><strong>WhatsApp:</strong> (11) 94715-0302</p>
+      <p><strong>WhatsApp:</strong> (11) 98495-4691</p>
+      <p><strong>Email:</strong> julianabarros2025@outlook.com</p>
+      <p><strong>Atendimento:</strong> São Paulo</p>
+    </div>
   </div>
 </section>
 
 <footer>
-  © 2025 — JBF Security • Segurança Eletrônica
+  <div class="footer-inner">
+    <div>
+      <strong>JBF Security</strong>
+      <p>Soluções profissionais em segurança eletrônica.</p>
+    </div>
+    <div>
+      <p>Links</p>
+      <a href="#">Política de Privacidade</a><br>
+      <a href="#">Termos</a>
+    </div>
+    <div>
+      <p>© 2025</p>
+    </div>
+  </div>
 </footer>
 
-<a href="https://wa.me/5511984954691" target="_blank" class="whatsapp-float">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
+<a class="whatsapp" href="https://wa.me/5511984954691" target="_blank"><i class="fab fa-whatsapp"></i> Atendimento imediato</a>
 
 </body>
 </html>

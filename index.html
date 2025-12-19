@@ -2,13 +2,16 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JBF Security | Segurança Eletrônica</title>
-  <meta name="description" content="Empresa especializada em soluções de segurança eletrônica." />
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
     :root{
       --accent:#ef4444;
+      --dark:#0b0f14;
     }
 
     *{box-sizing:border-box}
@@ -19,9 +22,11 @@
       color:#111;
     }
 
+    a{text-decoration:none}
+
     /* HEADER */
     header{
-      background:#0b0f14;
+      background:var(--dark);
       position:sticky;
       top:0;
       z-index:10;
@@ -34,32 +39,24 @@
       justify-content:space-between;
       align-items:center;
       padding:14px 20px;
-      color:#fff;
     }
 
     /* LOGO + AURA */
     .logo-img{
-      height:42px;
+      height:90px;
       animation:aura 3s infinite ease-in-out;
     }
 
     @keyframes aura{
-      0%{
-        filter:drop-shadow(0 0 8px rgba(239,68,68,.4));
-      }
-      50%{
-        filter:drop-shadow(0 0 30px rgba(239,68,68,.9));
-      }
-      100%{
-        filter:drop-shadow(0 0 8px rgba(239,68,68,.4));
-      }
+      0%{filter:drop-shadow(0 0 10px rgba(239,68,68,.4));}
+      50%{filter:drop-shadow(0 0 35px rgba(239,68,68,.9));}
+      100%{filter:drop-shadow(0 0 10px rgba(239,68,68,.4));}
     }
 
     .menu a{
       color:#e5e7eb;
       margin-left:18px;
-      text-decoration:none;
-      font-weight:600;
+      font-weight:bold;
     }
 
     /* HERO */
@@ -89,7 +86,6 @@
       color:#fff;
       padding:14px 22px;
       border-radius:10px;
-      text-decoration:none;
       font-weight:bold;
     }
 
@@ -113,11 +109,34 @@
       box-shadow:0 10px 25px rgba(0,0,0,.06);
     }
 
+    /* WHATSAPP FLOAT */
+    .whatsapp-float{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25d366;
+      color:#fff;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:32px;
+      box-shadow:0 10px 25px rgba(0,0,0,.3);
+      z-index:99;
+    }
+
     footer{
       background:#0b0f14;
       color:#cbd5e1;
       padding:30px;
       text-align:center;
+    }
+
+    @media(max-width:700px){
+      .logo-img{height:75px;}
+      .hero h1{font-size:32px;}
     }
   </style>
 </head>
@@ -137,17 +156,17 @@
 
 <section class="hero">
   <h1>Segurança Eletrônica Inteligente</h1>
-  <p>Projetos, instalação e manutenção em CFTV, alarmes e controle de acesso.</p>
+  <p>Projetos, instalação e manutenção em CFTV, alarmes, controle de acesso e proteção perimetral.</p>
   <a href="#contato" class="btn">Solicitar Orçamento</a>
 </section>
 
 <section id="solucoes">
   <h2>Nossas Soluções</h2>
   <div class="grid">
-    <div class="card">CFTV e Monitoramento</div>
-    <div class="card">Controle de Acesso</div>
-    <div class="card">Alarmes e Sensores</div>
-    <div class="card">Fechaduras Digitais</div>
+    <div class="card">📷 CFTV e Monitoramento</div>
+    <div class="card">🔐 Controle de Acesso</div>
+    <div class="card">🚨 Alarmes e Sensores</div>
+    <div class="card">🔑 Fechaduras Digitais</div>
   </div>
 </section>
 
@@ -162,15 +181,22 @@
 <section id="contato">
   <h2>Contato</h2>
   <div class="card">
-    <p><strong>Telefone:</strong> (11) 94715-0302</p>
-    <p><strong>WhatsApp:</strong> (11) 98495-4691</p>
-    <p><strong>Email:</strong> julianabarros2025@outlook.com</p>
+    <p><i class="fa-solid fa-phone"></i> <strong>Telefone:</strong> (11) 94715-0302</p>
+    <p><i class="fa-brands fa-whatsapp"></i> <strong>WhatsApp:</strong> (11) 98495-4691</p>
+    <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> julianabarros2025@outlook.com</p>
   </div>
 </section>
 
 <footer>
   © 2025 — JBF Security
 </footer>
+
+<!-- BOTÃO WHATSAPP -->
+<a class="whatsapp-float" 
+   href="https://wa.me/5511984954691" 
+   target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
